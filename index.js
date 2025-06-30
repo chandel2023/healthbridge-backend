@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
   res.send('✅ HealthBridge API is working');
 });
 
+// ✅✅✅ Add this test route for Render verification
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'Backend working fine ✅' });
+});
+
 // Routes
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
